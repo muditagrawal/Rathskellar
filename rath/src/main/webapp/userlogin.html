@@ -1,0 +1,12 @@
+<div class="loginBox" md-whiteframe="1" layout="column" align="center">
+<md-input-container>
+  <label>Username</label>
+  <input ng-model="usercredentials.username" type="text">
+</md-input-container>
+<md-input-container>
+  <label>Password</label>
+  <input ng-model="usercredentials.password" type="password">
+</md-input-container>
+{{ error }}
+<md-button class="md-raised md-primary" ng-click="login(usercredentials)">Login</md-button>
+</div>

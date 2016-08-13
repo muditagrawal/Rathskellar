@@ -1,0 +1,23 @@
+<div ng-controller="OrderSummaryCtrl">
+<md-content><md-button class="md-raised md-warn" ng-click="gotopayment()">Pay Now</md-button></md-content>
+<table>
+	<thead>
+		<td>Name</td>
+		<td>Quantity</td>
+		<td>Price</td>
+		<td>Total</td>
+	</thead>
+	<tr ng-repeat="(key,value) in ordereditems">
+	<td>{{ value.name }}</td>
+	<td>{{ value.quantity }}</td>
+	<td>{{ value.price }}</td>
+	<td>{{ value.total }}</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>Grand Total</td>
+		<td><input ng-value="{{grandtotal}}" readonly></td>
+	</tr>
+</table>
+</div>

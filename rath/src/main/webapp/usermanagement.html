@@ -1,0 +1,20 @@
+<div ng-controller="UserManagementCtrl" layout-margin>
+<mdt-table>
+    <mdt-header-row>
+      <mdt-column align-rule="center">Id</mdt-column>
+      <mdt-column align-rule="right">Username</mdt-column>
+      <mdt-column align-rule="right">Password</mdt-column>
+      <mdt-column align-rule="right">Role</mdt-column>
+      <mdt-column align-rule="center">Email</mdt-column>
+      <mdt-column align-rule="right">Verified</mdt-column>
+    </mdt-header-row>
+    <mdt-row ng-repeat="user in allusers">
+      <mdt-cell>{{ user.id }}</mdt-cell>
+      <mdt-cell>{{ user.username }}</mdt-cell>
+      <mdt-cell>{{ user.password }}</mdt-cell>
+      <mdt-cell>{{ user.role }}</mdt-cell>
+      <mdt-cell>{{ user.email }}</mdt-cell>
+      <mdt-cell>{{ user.verified }}</mdt-cell>
+    </mdt-row>
+  </mdt-table>
+</div>

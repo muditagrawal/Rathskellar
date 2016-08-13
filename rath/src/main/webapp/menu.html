@@ -1,0 +1,13 @@
+<h1>Rathskeller Menu</h1>
+<table onload="getmenu()">
+	<tr>
+		<td><h2>Name</h2></td>
+		<td><h2>Description</h2></td>
+		<td><h2>Category</h2></td>
+	</tr>
+	<tr ng-repeat="items in menuitems">
+		<td>{{ items.name }}</td>
+		<td>{{ items.description }}</td>
+		<td>{{ items.category.name }}</td>
+	</tr>
+</table>

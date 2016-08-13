@@ -1,0 +1,23 @@
+<div ng-controller="PaymentCtrl">
+<md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+    <div>
+    	<md-input-container>
+        <label>Name on Card</label>
+        <input ng-model="carddetails.holderName">
+      </md-input-container>
+      <md-input-container>
+        <label>Credit Card Number</label>
+        <input ng-model="carddetails.cardNo">
+      </md-input-container>
+       <md-datepicker ng-model="carddetails.expiryDate" md-placeholder="Enter date">
+         </md-datepicker>
+      <md-input-container>
+        <label>CVV</label>
+        <input ng-model="carddetails.cVV" md-maxlength="4">
+      </md-input-container>
+    </div>
+    <div>
+    	<md-button ng-click="processpayment()" class="md-raised md-warn">Confirm Payment</md-button>
+    </div>
+</md-content>
+</div>

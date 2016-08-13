@@ -1,0 +1,26 @@
+<div layout="row">
+<md-sidenav
+    class="md-sidenav-left"
+    md-component-id="left"
+    md-is-locked-open="$mdMedia('gt-md')"
+    md-disable-backdrop
+    md-whiteframe="1">
+    <div class="md-toolbar" layout="column">
+      <h2>
+        <span>Welcome {{ user.username }}</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-raised md-primary" ng-click="changeview('neworder.html')" flex>New Order</md-button>
+      <md-button class="md-raised md-primary" ng-click="changeview('orderhistory.html')" flex>Order History</md-button>
+      <md-button class="md-raised md-primary" ng-click="changeview('customertransaction.html')" flex>Transaction History</md-button>
+      <md-button class="md-raised md-primary" ng-click="changeview('neworder.html')" flex>Menu</md-button>
+      <md-button class="md-raised md-primary" ng-click="changeview('address.html')" flex>My Addresses</md-button>
+      <md-button class="md-raised md-primary" ng-click="changeview('userprofile.html')" flex>My Profile</md-button>
+      <md-button class="md-raised md-primary" ng-click="changeview('usersettings.html')" flex>Settings</md-button>
+    </div>
+</md-sidenav>
+<div class="slide-animate-container">
+    <div class="slide-animate" ng-include="tool" style="width:800px; max-height:480px;">
+    </div>  
+</div>
+</div>

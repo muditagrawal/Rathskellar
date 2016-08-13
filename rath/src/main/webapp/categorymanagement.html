@@ -1,0 +1,29 @@
+<div ng-controller="CategoryManagementCtrl" layout-margin>
+<md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="newcategory.name" type="text">
+      </md-input-container>
+      <md-input-container>
+        <label>Description</label>
+        <input ng-model="newcategory.description" type="text">
+      </md-input-container>
+      <md-input-container>
+      		<md-button class="md-raised" ng-click="addcategory()">Add Category</md-button>
+    </md-input-container>
+    </div>
+</md-content>
+<mdt-table>
+    <mdt-header-row>
+      <mdt-column align-rule="right">Id</mdt-column>
+      <mdt-column align-rule="right">Name</mdt-column>
+      <mdt-column align-rule="right">Description</mdt-column>
+    </mdt-header-row>
+    <mdt-row ng-repeat="category in categories">
+      <mdt-cell>{{ category.id }}</mdt-cell>
+      <mdt-cell>{{ category.name }}</mdt-cell>
+      <mdt-cell>{{ category.description }}</mdt-cell>
+    </mdt-row>
+  </mdt-table>
+</div>

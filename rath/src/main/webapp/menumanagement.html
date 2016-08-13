@@ -1,0 +1,41 @@
+<div ng-controller="MenuManagementCtrl" layout-margin>
+<md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="newmenuitem.name" type="text">
+      </md-input-container>
+      <md-input-container>
+        <label>Description</label>
+        <input ng-model="newmenuitem.description" type="text">
+      </md-input-container>
+      <md-input-container>
+      <label>Category</label>
+            <md-select ng-model="newmenuitem.category">
+              <md-option ng-repeat="category in categories" value="{{category}}">
+                {{category.name}}
+              </md-option>
+            </md-select>
+      </md-input-container>
+      <md-input-container>
+      		<md-button class="md-raised" ng-click="addmenuitem()">Add Item</md-button>
+    </md-input-container>
+    </div>
+</md-content>
+<mdt-table>
+    <mdt-header-row>
+      <mdt-column align-rule="right">Id</mdt-column>
+      <mdt-column align-rule="right">Name</mdt-column>
+      <mdt-column align-rule="right">Description</mdt-column>
+      <mdt-column align-rule="right">Category</mdt-column>
+      <mdt-column align-rule="right">Edit</mdt-column>
+    </mdt-header-row>
+    <mdt-row ng-repeat="menuitem in menuitems">
+      <mdt-cell>{{ menuitem.id }}</mdt-cell>
+      <mdt-cell>{{ menuitem.name }}</mdt-cell>
+      <mdt-cell>{{ menuitem.description }}</mdt-cell>
+      <mdt-cell>{{ menuitem.category.name }}</mdt-cell>
+      <mdt-cell></mdt-cell>
+    </mdt-row>
+  </mdt-table>
+</div>

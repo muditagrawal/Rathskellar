@@ -1,0 +1,30 @@
+<div ng-controller="NewOrderCtrl" style="width:800px; max-height:480px;">
+<md-tabs md-selected="selectedIndex" style="width:800px; max-height:480px;">
+      <md-tab ng-repeat="category in categories"
+              label="{{category.name}}" md-on-select="hello(selectedIndex)">
+        <div id="{{category.name}}" style="width:800px; max-height:480px; overflow: scroll;">
+        <md-content class="md-padding"><div ng-if="checkfirsttab()"><md-button class="md-raised md-warn" ng-click="previousTab()">Previous</md-button></div><div ng-if="checklasttab()"><md-button class="md-raised md-warn" ng-click="orderSummary()">Proceed to Payment</md-button></div><div ng-if="!checklasttab()"><md-button class="md-raised md-warn" ng-click="nextTab()">Next</md-button></div></md-content>
+        <table>
+        	<thead>
+        		<td>Name</td>
+        		<td>Description</td>
+        		<td>Price</td>
+        		<td>Quantity</td>
+ 		        <td>Total</td>
+        	</thead>
+        	<tr ng-repeat="menuitem in currentcategorymenu">
+        	<td><label>{{menuitem.name}}</label></td>
+        	<td>{{menuitem.description}}</td>
+        	<td><label>{{menuitem.price}}</label></td>
+        	<td><md-select ng-model="menuitem.quantity" ng-change="calculatetotal(menuitem)" >
+              <md-option ng-repeat="quantity in quantities" value="{{quantity.value}}">
+                {{quantity.value}}
+              </md-option>
+            </md-select></td>
+        	<td><input ng-model="menuitem.total" ng-value="menuitem.total" readonly></td>
+        	</tr>
+        </table>
+       </div>
+      </md-tab>
+    </md-tabs>
+</div>

@@ -1,0 +1,36 @@
+<div ng-controller="UserProfileCtrl" layout-margin>
+<md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <md-input-container>
+        <label>Username</label>
+        <input ng-model="user.username" readonly>
+      </md-input-container>
+      <md-input-container>
+        <label>Email</label>
+        <input ng-model="user.email" type="email" readonly>
+      </md-input-container>
+      <md-input-container>
+        <label>Role</label>
+        <input ng-model="user.role" type="text" readonly>
+      </md-input-container>
+    </div>
+</md-content>
+<md-content layout-gt-sm="column" layout-padding>
+	<md-input-container>
+        <label>First Name</label>
+        <input ng-model="userdetails.firstname">
+    </md-input-container>
+    <md-input-container>
+        <label>Middle Name</label>
+        <input ng-model="userdetails.middlename">
+    </md-input-container>
+    <md-input-container>
+        <label>Last Name</label>
+        <input ng-model="userdetails.lastname">
+    </md-input-container>
+    <md-input-container>
+          <md-button class="md-raised" ng-click="updateuserdetails()">Update User Details</md-button>
+    </md-input-container>
+    
+  </md-content>
+</div>

@@ -1,0 +1,20 @@
+<div ng-controller="OrderManagementCtrl" layout-margin>
+<mdt-table>
+    <mdt-header-row>
+      <mdt-column align-rule="center">Id</mdt-column>
+      <mdt-column align-rule="right">Username</mdt-column>
+      <mdt-column align-rule="right">OrderType</mdt-column>
+      <mdt-column align-rule="right">Role</mdt-column>
+      <mdt-column align-rule="center">Email</mdt-column>
+      <mdt-column align-rule="right">Verified</mdt-column>
+    </mdt-header-row>
+    <mdt-row ng-repeat="order in allorders">
+      <mdt-cell>{{ order.id }}</mdt-cell>
+      <mdt-cell>{{ order.user.username }}</mdt-cell>
+      <mdt-cell>{{ order.ordertype }}</mdt-cell>
+      <mdt-cell>{{ order.role }}</mdt-cell>
+      <mdt-cell>{{ order.email }}</mdt-cell>
+      <mdt-cell>{{ order.verified }}</mdt-cell>
+    </mdt-row>
+  </mdt-table>
+</div>

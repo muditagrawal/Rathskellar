@@ -1,0 +1,17 @@
+<div ng-controller="UserSettingsCtrl" layout-margin>
+<md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <md-input-container>
+        <label>Password</label>
+        <input ng-model="password" type="password">
+      </md-input-container>
+      <md-input-container>
+        <label>Confirm Password</label>
+        <input ng-model="rpassword" type="password">
+      </md-input-container>
+      <md-input-container>
+      <md-button class="md-raised" ng-click="changepassword()">Update Password</md-button>
+    	</md-input-container>
+    </div>
+</md-content>
+</div>
