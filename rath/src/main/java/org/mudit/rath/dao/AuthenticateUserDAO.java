@@ -106,7 +106,7 @@ public class AuthenticateUserDAO {
     				,new javax.mail.Authenticator(){
                 		@Override
                 		protected PasswordAuthentication getPasswordAuthentication(){
-                			return new PasswordAuthentication("mudit.agrawal.2007@gmail.com","Florida@999");
+                			return new PasswordAuthentication("mudit.agrawal.2007@gmail.com","MyEmailIdPassword");
                 		}
     		});
     		String token = issueToken(user,86400000);
